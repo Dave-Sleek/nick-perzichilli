@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nick Perzichilli - Entrepreneur, Venture Strategist, and Marketing Executive specializing in fintech, venture capital, and emerging technologies.">
+    <meta name="keywords" content="Nick Perzichilli, fintech, venture capital, entrepreneurship, emerging technologies, Web3, AdvisorX">
+    <meta name="author" content="Nick Perzichilli">
+    <title>Nick Perzichilli | Entrepreneur & Venture Strategist</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">Nick<span class="logo-accent">.</span></span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-text="HOME">HOME</a>
+                <a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a>
+                <a href="#skills" class="nav-link" data-text="SKILLS">SKILLS</a>
+                <a href="#achievements" class="nav-link" data-text="ACHIEVEMENTS">ACHIEVEMENTS</a>
+                <a href="#social" class="nav-link" data-text="SOCIAL">SOCIAL</a>
+                <a href="#contact" class="nav-link" data-text="CONTACT">CONTACT</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-text">
+            <span class="accent">Nick</span> Perzichilli
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div id="particles"></div>
+        <div class="container">
+            <div class="home-content">
+                <h1 class="home-title">
+                    <span class="accent">Nick</span> Perzichilli
+                </h1>
+                <div class="home-subtitle">
+                    I'm <span class="txt-rotate accent" data-period="1200" data-rotate='["a Venture Strategist.", "an Entrepreneur.", "a Marketing Executive."]'></span>
+                </div>
+
+                <div class="home-cta">
+                    <a href="#about" class="btn btn-primary">
+                        <span>Discover More</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="social-links">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/nickperzichilli/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+    </a>
+    
+    <!-- Twitter -->
+    <a href="https://twitter.com/nickperzichilli" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+        </svg>
+    </a>
+    
+    <!-- GitHub -->
+    <a href="https://github.com/nickperzichilli" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+    </a>
+    
+    <!-- Crunchbase -->
+    <a href="https://www.crunchbase.com/person/nick-perzichilli" class="social-link" aria-label="Crunchbase" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+            <path d="M16.5 7.5h-9v9h9v-9zm-7 7v-5h5v5h-5z"/>
+            <circle cx="10.5" cy="10.5" r="1.5"/>
+            <circle cx="13.5" cy="10.5" r="1.5"/>
+            <circle cx="10.5" cy="13.5" r="1.5"/>
+            <circle cx="13.5" cy="13.5" r="1.5"/>
+        </svg>
+    </a>
+</div>
+        <div class="theme-toggle" id="theme-toggle">
+    <div class="theme-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </div>
+    <div class="theme-selector">
+        <div class="theme-heading">Color Theme</div>
+        <div class="theme-colors">
+            <button class="theme-color theme-red" data-color="red" aria-label="Red theme"></button>
+            <button class="theme-color theme-purple" data-color="purple" aria-label="Purple theme"></button>
+            <button class="theme-color theme-blue" data-color="blue" aria-label="Blue theme"></button>
+            <button class="theme-color theme-green" data-color="green" aria-label="Green theme"></button>
+            <button class="theme-color theme-orange" data-color="orange" aria-label="Orange theme"></button>
+            <button class="theme-color theme-teal" data-color="teal" aria-label="Teal theme"></button>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span class="accent">Me</span></h2>
+                <p class="section-subtitle">Want To Know More About <span class="accent">Me?</span></p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm Nick Perzichilli — an <span class="accent">Entrepreneur</span>, Venture Strategist, and Marketing Executive.
+                    </p>
+                    <p class="about-description">
+                        Nick Perzichilli is a seasoned entrepreneur with expertise spanning marketing, e-commerce, banking, and Web3. His entrepreneurial acumen shines with companies he co-founded reaching big exits, including a pivotal role in the $300 million acquisition by American Express. 
+                    </p>
+                    <p class="about-description">
+                        Today, he spearheads <strong>AdvisorX</strong>, a premier 300+ team of Web3 advisors and experts offering capital, treasury management, market making, advisory, GTM, TGE, community & growth services. Humble and grateful for his achievements, Nick looks forward to brightening the Web3 revolution.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/nick-perzichilli.jpg" alt="Nick Perzichilli">
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#skills" class="btn btn-secondary">
+                    <span>Explore Skills</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-subtitle">Curious about <span class="accent">my skills?</span></p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3 class="skill-name">Venture Strategy & Fundraising</h3>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-percentage="95"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3 class="skill-name">Fintech & Payments Innovation</h3>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-percentage="90"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3 class="skill-name">Business Development & Growth</h3>
+                        <span class="skill-percentage">92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-percentage="92"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3 class="skill-name">Leadership & Team Building</h3>
+                        <span class="skill-percentage">100%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-percentage="100"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3 class="skill-name">Strategic Partnerships</h3>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-percentage="85"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3 class="skill-name">Web3 & Digital Assets</h3>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-percentage="88"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h3 class="skill-name">Go-To-Market Strategy (GTM)</h3>
+                        <span class="skill-percentage">93%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-percentage="93"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#social" class="btn btn-secondary">
+                    <span>Connect With Me</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+<section id="achievements" class="section achievements-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Career <span class="accent">Achievements</span></h2>
+            <p class="section-subtitle">Notable <span class="accent">Milestones</span> & Successes</p>
+        </div>
+
+        <div class="achievements-grid">
+            <!-- Major Acquisition -->
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                    </svg>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">$300M+ Acquisition</h3>
+                    <p class="achievement-description">
+                        Played a pivotal role in the $300 million acquisition by American Express, 
+                        demonstrating exceptional strategic leadership and business acumen.
+                    </p>
+                    <div class="achievement-meta">
+                        <span class="achievement-company">American Express</span>
+                        <span class="achievement-year">Major Exit</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AdvisorX -->
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">AdvisorX Leadership</h3>
+                    <p class="achievement-description">
+                        Founded and lead AdvisorX, a premier 300+ team of Web3 advisors providing 
+                        comprehensive blockchain and digital asset solutions.
+                    </p>
+                    <div class="achievement-meta">
+                        <span class="achievement-company">AdvisorX</span>
+                        <span class="achievement-year">Current Venture</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web3 Expertise -->
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14,2 14,8 20,8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10,9 9,9 8,9"></polyline>
+                    </svg>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Web3 Innovation</h3>
+                    <p class="achievement-description">
+                        Spearheaded Web3 initiatives including capital raising, treasury management, 
+                        market making, and comprehensive advisory services for blockchain projects.
+                    </p>
+                    <div class="achievement-meta">
+                        <span class="achievement-company">Blockchain Ecosystem</span>
+                        <span class="achievement-year">Industry Leadership</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entrepreneurial Track Record -->
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Serial Entrepreneurship</h3>
+                    <p class="achievement-description">
+                        Multiple successful ventures across fintech, e-commerce, and banking sectors, 
+                        with expertise in scaling businesses and driving exponential growth.
+                    </p>
+                    <div class="achievement-meta">
+                        <span class="achievement-company">Various Ventures</span>
+                        <span class="achievement-year">Proven Track Record</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Partnerships -->
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                        <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                        <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Global Partnerships</h3>
+                    <p class="achievement-description">
+                        Established strategic partnerships with leading financial institutions, 
+                        technology companies, and blockchain projects worldwide.
+                    </p>
+                    <div class="achievement-meta">
+                        <span class="achievement-company">Global Network</span>
+                        <span class="achievement-year">Strategic Alliances</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry Recognition -->
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Industry Thought Leader</h3>
+                    <p class="achievement-description">
+                        Recognized as a leading voice in fintech and Web3 innovation, 
+                        contributing to industry evolution through advisory and strategic guidance.
+                    </p>
+                    <div class="achievement-meta">
+                        <span class="achievement-company">Fintech & Web3</span>
+                        <span class="achievement-year">Thought Leadership</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Counter -->
+        <div class="achievements-stats">
+            <div class="stat-item">
+                <div class="stat-number" data-count="300">0</div>
+                <div class="stat-label">Team Members</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="300">0</div>
+                <div class="stat-label">Million+ Exit</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="10">0</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="50">0</div>
+                <div class="stat-label">Projects Advised</div>
+            </div>
+        </div>
+
+        <div class="section-cta">
+            <a href="#contact" class="btn btn-secondary">
+                <span>Discuss Opportunities</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Social Section -->
+    <section id="social" class="section social-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="accent">Social</span> Links</h2>
+                <p class="section-subtitle">Connect with <span class="accent">Me!</span></p>
+            </div>
+            <div class="social-grid">
+                <div class="social-card">
+                    <div class="social-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </div>
+                    <h3 class="social-title">GitHub</h3>
+                    <p class="social-description">Explore my projects and contributions on GitHub.</p>
+                    <a href="https://github.com/nickperzichilli" class="btn btn-outline">
+                        <span>Visit GitHub</span>
+                    </a>
+                </div>
+                <div class="social-card">
+                <div class="social-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <!-- Crunchbase Logo -->
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
+                        <path d="M16.5 7.5h-9v9h9v-9zm-7 7v-5h5v5h-5z"/>
+                        <circle cx="10.5" cy="10.5" r="1.5"/>
+                        <circle cx="13.5" cy="10.5" r="1.5"/>
+                        <circle cx="10.5" cy="13.5" r="1.5"/>
+                        <circle cx="13.5" cy="13.5" r="1.5"/>
+                    </svg>
+                </div>
+                <h3 class="social-title">Crunchbase</h3>
+                <p class="social-description">View my investment portfolio and business ventures.</p>
+                <a href="https://www.crunchbase.com/person/nick-perzichilli" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                    <span>Visit Crunchbase</span>
+                </a>
+            </div>
+                <div class="social-card">
+                    <div class="social-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <h3 class="social-title">LinkedIn</h3>
+                    <p class="social-description">Connect with me professionally on LinkedIn.</p>
+                    <a href="https://www.linkedin.com/in/nickperzichilli/" class="btn btn-outline">
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+                <p class="section-subtitle"><span class="accent">Get</span> In Touch</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3 class="form-title">Send Me a Message</h3>
+                    <form id="contact-form" class="form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-input" required>
+                                <label for="name" class="form-label">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <label for="email" class="form-label">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                            <label for="subject" class="form-label">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-input form-textarea" required></textarea>
+                            <label for="message" class="form-label">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Contact Information</h3>
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Name</h4>
+                                <p>Nick Perzichilli</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Based in the United States</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>np.adtech@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+        <div class="footer-text">
+            <span class="copyright">©</span>
+            <span class="accent">Nick Perzichilli</span> ~ <span id="year"></span>
+        </div>
+        <div class="footer-links">
+            <a href="#home" class="footer-link">Home</a>
+            <a href="#about" class="footer-link">About</a>
+            <a href="#skills" class="footer-link">Skills</a>
+            <a href="#social" class="footer-link">Social</a>
+            <a href="#contact" class="footer-link">Contact</a>
+        </div>
+        </div>
+    </div>
+    </footer>
+
+    <script>
+    // Display current year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/particles.min.js"></script> -->
+    <script src="js/index.js"></script>
+    
+    <!-- Particles Configuration -->
+    <script>
+        particlesJS("particles", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>

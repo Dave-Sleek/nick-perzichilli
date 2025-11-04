@@ -1586,3 +1586,387 @@ textarea:focus-visible {
         order: 2;
     }
 }
+
+/* ===== HOME SECTION - RESPONSIVE ===== */
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-xl) 0;
+}
+
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.home-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* Desktop Typography */
+.home-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--text) 0%, var(--text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.home-subtitle {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    margin-bottom: var(--space-xl);
+    color: var(--text-secondary);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.home-cta {
+    margin-top: var(--space-xl);
+}
+
+/* Desktop Layout - Side Elements */
+.social-links {
+    position: fixed;
+    left: var(--space-lg);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    z-index: 100;
+}
+
+.theme-toggle {
+    position: fixed;
+    right: var(--space-lg);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+/* Social Links & Theme Toggle Base Styles */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    color: var(--text-secondary);
+    transition: var(--transition-normal);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.theme-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: var(--transition-normal);
+    color: var(--text-secondary);
+    backdrop-filter: blur(10px);
+}
+
+.theme-icon:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: rotate(45deg);
+}
+
+.theme-selector {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    margin-top: var(--space-sm);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-xl);
+    min-width: 150px;
+    backdrop-filter: blur(10px);
+}
+
+.theme-toggle.active .theme-selector {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* ===== MOBILE RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .home-section {
+        min-height: 100vh;
+        padding: var(--space-xl) 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .home-content {
+        padding: 0 var(--space-md);
+        text-align: center;
+    }
+    
+    .home-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+        margin-bottom: var(--space-sm);
+        line-height: 1.2;
+    }
+    
+    .home-subtitle {
+        font-size: clamp(1.125rem, 5vw, 1.5rem);
+        margin-bottom: var(--space-lg);
+        line-height: 1.4;
+    }
+    
+    .home-cta {
+        margin-top: var(--space-lg);
+    }
+    
+    /* Mobile - Reposition social links to bottom */
+    .social-links {
+        position: fixed;
+        bottom: var(--space-lg);
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        flex-direction: row;
+        gap: var(--space-md);
+        background: var(--surface);
+        padding: var(--space-md);
+        border-radius: var(--radius-xl);
+        border: 1px solid var(--border);
+        backdrop-filter: blur(20px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .social-link {
+        width: 44px;
+        height: 44px;
+        background: var(--background);
+    }
+    
+    /* Mobile - Reposition theme toggle to top right */
+    .theme-toggle {
+        position: fixed;
+        top: var(--space-lg);
+        right: var(--space-md);
+        left: auto;
+        transform: none;
+    }
+    
+    .theme-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--surface);
+        backdrop-filter: blur(20px);
+    }
+    
+    .theme-selector {
+        top: calc(100% + 8px);
+        right: 0;
+        left: auto;
+        transform-origin: top right;
+    }
+}
+
+/* ===== SMALL MOBILE OPTIMIZATIONS ===== */
+@media (max-width: 480px) {
+    .home-section {
+        padding: var(--space-lg) 0;
+    }
+    
+    .home-content {
+        padding: 0 var(--space-sm);
+    }
+    
+    .home-title {
+        font-size: clamp(1.75rem, 12vw, 2.5rem);
+        margin-bottom: var(--space-sm);
+    }
+    
+    .home-subtitle {
+        font-size: clamp(1rem, 5vw, 1.25rem);
+        margin-bottom: var(--space-md);
+    }
+    
+    .social-links {
+        bottom: var(--space-md);
+        padding: var(--space-sm);
+        gap: var(--space-sm);
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .theme-toggle {
+        top: var(--space-md);
+        right: var(--space-sm);
+    }
+    
+    .theme-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .home-cta .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
+
+/* ===== TABLET OPTIMIZATIONS ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .home-title {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+    }
+    
+    .home-subtitle {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+    }
+    
+    .social-links {
+        left: var(--space-md);
+    }
+    
+    .theme-toggle {
+        right: var(--space-md);
+    }
+}
+
+/* ===== LARGE DESKTOP ENHANCEMENTS ===== */
+@media (min-width: 1440px) {
+    .home-title {
+        font-size: 5rem;
+    }
+    
+    .home-subtitle {
+        font-size: 2rem;
+    }
+    
+    .social-links {
+        left: calc(50% - 600px + var(--space-lg));
+    }
+    
+    .theme-toggle {
+        right: calc(50% - 600px + var(--space-lg));
+    }
+}
+
+/* ===== ACCESSIBILITY & INTERACTION ENHANCEMENTS ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+    .home-section {
+        min-height: 120vh;
+        padding: var(--space-xl) 0;
+    }
+    
+    .home-title {
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+    }
+    
+    .home-subtitle {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .home-title,
+    .home-subtitle,
+    .home-cta {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    .social-link:hover,
+    .theme-icon:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .social-link,
+    .theme-icon {
+        border-width: 2px;
+    }
+    
+    .home-title {
+        -webkit-text-fill-color: var(--text);
+        background: none;
+    }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+    .social-links,
+    .theme-toggle .theme-icon {
+        background: rgba(30, 41, 59, 0.8);
+    }
+}
+
+/* Touch device optimizations */
+.touch-device .social-link,
+.touch-device .theme-icon {
+    min-height: 44px; /* Apple's recommended touch target size */
+    min-width: 44px;
+}
+
+.touch-device .home-cta .btn {
+    padding: var(--space-lg) var(--space-xl);
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .cursor {
+        display: none;
+    }
+}
+
+/* Mobile-specific animations */
+@media (max-width: 768px) {
+    .home-title,
+    .home-subtitle,
+    .home-cta {
+        animation-duration: 0.8s; /* Slightly faster on mobile */
+    }
+}

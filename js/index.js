@@ -19,6 +19,7 @@ function initializeApp() {
     initializeScrollEffects();
     initializeParticles();
      initializeAchievementsAnimations();
+     initializeMobileHomeSection();
     
     // Set initial theme
     setTheme('blue');
@@ -684,3 +685,136 @@ function animateCounter(element, start, end, duration) {
     };
     window.requestAnimationFrame(step);
 }
+
+
+
+// ===== PARTICLES.JS INITIALIZATION =====
+function initializeParticles() {
+    // Wait for particlesJS to be available
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS("particles", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+    } else {
+        console.warn('particlesJS not loaded yet, retrying...');
+        // Retry after a short delay
+        setTimeout(initializeParticles, 100);
+    }
+}
+
+// Update your initializeApp function
+// function initializeApp() {
+//     initializeLoader();
+//     initializeNavigation();
+//     initializeCustomCursor();
+//     initializeThemeSystem();
+//     initializeAnimations();
+//     initializeTypewriter();
+//     initializeSkillsAnimation();
+//     initializeContactForm();
+//     initializeScrollEffects();
+//     initializeLogoAnimations();
+//     initializeAchievementsAnimations();
+//     initializeParticles(); // Add this line
+    
+//     setTheme('blue');
+// }
+
+// Enhanced mobile handling for home section
+function initializeMobileHomeSection() {
+    const homeSection = document.querySelector('.home-section');
+    const socialLinks = document.querySelector('.social-links');
+    const themeToggle = document.querySelector('.theme-toggle');
+    
+    // Handle viewport changes
+    function handleViewportChange() {
+        const isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+            // Mobile-specific optimizations
+            document.body.classList.add('mobile-view');
+        } else {
+            document.body.classList.remove('mobile-view');
+        }
+    }
+    
+    // Initial check
+    handleViewportChange();
+    
+    // Listen for resize events
+    window.addEventListener('resize', handleViewportChange);
+    
+    // Touch optimizations for mobile
+    if ('ontouchstart' in window) {
+        document.body.classList.add('touch-device');
+        
+        // Increase touch targets for mobile
+        socialLinks?.classList.add('touch-optimized');
+        themeToggle?.classList.add('touch-optimized');
+    }
+}
+

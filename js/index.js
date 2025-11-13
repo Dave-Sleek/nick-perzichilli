@@ -475,31 +475,46 @@ function initializeContactForm() {
     }
 }
 
-function handleFormSubmit(form) {
+async function handleFormSubmit(form) {
     const formData = new FormData(form);
     const submitButton = form.querySelector('button[type="submit"]');
     const originalText = submitButton.innerHTML;
-    
+
     // Show loading state
     submitButton.innerHTML = '<span>Sending...</span>';
     submitButton.disabled = true;
-    
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-        // Show success message
-        showNotification('Message sent successfully!', 'success');
-        
-        // Reset form
-        form.reset();
-        
-        // Reset button
+
+    try {
+        // Convert FormData to plain object
+        const data = Object.fromEntries(formData.entries());
+
+        // Send to Netlify Function
+        const response = await fetch("/.netlify/functions/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            showNotification("Message sent successfully!", "success");
+            form.reset();
+        } else {
+            showNotification(`Error: ${result.error}`, "error");
+        }
+    } catch (error) {
+        showNotification("Something went wrong. Please try again.", "error");
+        console.error(error);
+    } finally {
+        // Reset button state
         submitButton.innerHTML = originalText;
         submitButton.disabled = false;
-        
+
         // Remove has-value classes
-        const formGroups = form.querySelectorAll('.form-group');
-        formGroups.forEach(group => group.classList.remove('has-value'));
-    }, 2000);
+        const formGroups = form.querySelectorAll(".form-group");
+        formGroups.forEach(group => group.classList.remove("has-value"));
+    }
 }
 
 function showNotification(message, type = 'info') {

@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
     // Send the email
     await transporter.sendMail({
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-      to: "enyidavid87@gmail.com", // where you want to receive emails
+      to: "npweb3@gmail.com", // where you want to receive emails
       subject: "New Contact Form Submission",
       text: `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`,
     });
